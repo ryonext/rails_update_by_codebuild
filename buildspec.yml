@@ -6,5 +6,5 @@ phases:
       - bundle
   build:
     commands:
-      - rake spec
+      - bundle exec rake spec
 
