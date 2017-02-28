@@ -3,7 +3,7 @@ version: 0.1
 phases:
   install:
     commands:
-      - sudo apt-get nodejs
+      - sudo apt-get install nodejs
       - bundle
   build:
     commands:
