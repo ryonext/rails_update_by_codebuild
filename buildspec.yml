@@ -9,4 +9,11 @@ phases:
   build:
     commands:
       - bundle exec rake spec
+  post_build:
+    commands:
+      # create git branch
+      - git checkout -b bundle_update_`date "+%s"`
+      - git add Gemfill.lock
+      - git commit -m "Today's bundle update"
+       # create PR
 
