@@ -11,7 +11,9 @@ phases:
       - bundle exec rake spec
   post_build:
     commands:
-      # create git branch
+      - git clone rails_update_by_codebuild
+      - cp Gemfile.lock ./rails_update_by_codebuild/Gemfile.lock
+      - cd ./rails_update_by_codebuild/Gemfile.lock
       - git checkout -b bundle_update_`date "+%s"`
       - git add Gemfill.lock
       - git commit -m "Today's bundle update"
