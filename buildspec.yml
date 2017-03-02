@@ -5,7 +5,7 @@ phases:
     commands:
       - sudo apt-get -y update
       - sudo apt-get -y install nodejs
-      - bundle
+      - bundle update
   build:
     commands:
       - bundle exec rake spec
