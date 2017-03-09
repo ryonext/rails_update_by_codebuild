@@ -13,11 +13,6 @@ phases:
     commands:
       - git clone https://github.com/ryonext/rails_update_by_codebuild.git
       - cp Gemfile.lock ./rails_update_by_codebuild/Gemfile.lock
-      - pwd
-      - cd ./rails_update_by_codebuild
-      - pwd
-      - cd ./rails_update_by_codebuild && git checkout -b bundle_update_`date "+%s"`
-      - git add Gemfill.lock
-      - git commit -m "Today's bundle update"
-       # git push
+      - cd ./rails_update_by_codebuild && git checkout -b bundle_update_`date "+%s"` && git add Gemfill.lock && git commit -m "Today's bundle update"
+      - cd ./rails_update_by_codebuild && git push
        # create PR
