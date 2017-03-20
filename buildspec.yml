@@ -11,4 +11,4 @@ phases:
       - bundle exec rake spec
   post_build:
     commands:
-      - ./post_build.sh
+      - sh ./post_build.sh
