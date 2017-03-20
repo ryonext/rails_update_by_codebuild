@@ -1,5 +1,8 @@
 #!/bin/sh
 
+aws s3 cp $S3_ID_RSA ~/.ssh/id_rsa
+cp ssh_config ~/.ssh/config
+
 git clone git@github.com:ryonext/rails_update_by_codebuild.git
 cp Gemfile.lock ./rails_update_by_codebuild/Gemfile.lock
 cd ./rails_update_by_codebuild
