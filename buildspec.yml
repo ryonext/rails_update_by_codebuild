@@ -3,8 +3,8 @@ version: 0.1
 phases:
   install:
     commands:
-      - sudo yum update
-      - sudo yum -y install nodejs
+      - yum update
+      - yum -y install nodejs
       - bundle update
   build:
     commands:
